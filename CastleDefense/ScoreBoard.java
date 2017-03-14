@@ -19,7 +19,7 @@ public class ScoreBoard extends World
         super(1200, 750, 1);
         addObject(new Score(),600,375);
         addObject(new Main(),600,650);
-        showText(""+PlayWorld.score,600,435);
+        showText(""+PlayWorld.score,600,450);
     }
     
 }

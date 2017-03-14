@@ -20,6 +20,7 @@ public class EnemyCastle extends Enemies
         // Add your action code here.
         
         spawnUnit();
+        endGame();
     }
     public void prepare(){
         Hp = Hp*Difficulty.diff;
@@ -50,7 +51,7 @@ public class EnemyCastle extends Enemies
    } 
    }
    public void endGame(){
-       if(this.Hp<=0){
+       if(this.Hp<0){
            Greenfoot.setWorld(new ScoreBoard());
            this.Hp=2000;
            this.win = 0;

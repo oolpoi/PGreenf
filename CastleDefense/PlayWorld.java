@@ -32,7 +32,9 @@ public class PlayWorld extends World
             time++;
             if(time==60)second++;
             time = ((time*60)/60)%60; 
-            if (second==60)min ++;
+            if (second==60){min ++;
+                second/=60;
+            }
         showText("Time : "+min+"."+second,600,120);
     }
         showText("Health : "+AllyCastle.Hp,1100,140);
@@ -50,6 +52,8 @@ public class PlayWorld extends World
         
         addObject(new Ab(),699,654);
         addObject(new Fb(),582,654);
+        
+        addObject(new Restart(),1100,650);
         
     }
 }

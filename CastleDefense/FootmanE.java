@@ -35,9 +35,9 @@ public class FootmanE extends Enemies
          if(isTouching(AllyCastle.class)){
              getWorld().removeObject(this);
              AllyCastle.Hp-=30+Difficulty.diff*20;
-             return;
+             
             }
-         return;
+         
     }
    }
 }

@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ab extends Button
 {
-    public static int count = 0;
+   
     GreenfootSound sound = new GreenfootSound("tele.wav");
     
     /**
@@ -22,7 +22,7 @@ public class Ab extends Button
     }
     public void spawn(){ 
     if(Greenfoot.mouseClicked(this)){
-        count++;
+        
             if(PlayWorld.money>=200){
                 PlayWorld.money-=200;
                 sound.setVolume(50);

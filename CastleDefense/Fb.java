@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fb extends Button
 {
+    GreenfootSound sound = new GreenfootSound("tele.wav");
     /**
      * Act - do whatever the Fb wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -21,6 +22,8 @@ public class Fb extends Button
     if(Greenfoot.mouseClicked(this)){
             if(PlayWorld.money>=100){
                 PlayWorld.money-=100;
+                sound.setVolume(50);
+                sound.play();
                 getWorld().addObject(new Footman(),1200,565);
         }
         
