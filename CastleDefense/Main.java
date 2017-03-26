@@ -32,4 +32,8 @@ public class Main extends Button
         }
         
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> refs/heads/Master

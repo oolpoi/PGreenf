@@ -285,6 +285,12 @@ dependency80.type=UsesDependency
 dependency81.from=Restart
 dependency81.to=Difficulty
 dependency81.type=UsesDependency
+<<<<<<< HEAD
+=======
+dependency82.from=Home
+dependency82.to=Main
+dependency82.type=UsesDependency
+>>>>>>> refs/heads/Master
 dependency9.from=Home
 dependency9.to=Start
 dependency9.type=UsesDependency
@@ -292,6 +298,7 @@ editor.fx.0.height=700
 editor.fx.0.width=700
 editor.fx.0.x=0
 editor.fx.0.y=0
+<<<<<<< HEAD
 editor.swing.0.height=738
 editor.swing.0.width=700
 editor.swing.0.x=337
@@ -301,6 +308,17 @@ mainWindow.width=1320
 mainWindow.x=-8
 mainWindow.y=-8
 package.numDependencies=81
+=======
+editor.swing.0.height=700
+editor.swing.0.width=627
+editor.swing.0.x=73
+editor.swing.0.y=0
+mainWindow.height=780
+mainWindow.width=1320
+mainWindow.x=-8
+mainWindow.y=-8
+package.numDependencies=82
+>>>>>>> refs/heads/Master
 package.numTargets=26
 project.charset=UTF-8
 readme.height=58

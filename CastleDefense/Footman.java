@@ -19,6 +19,7 @@ public class Footman extends Allies
     public void act() 
     {
         // Add your action code here.
+<<<<<<< HEAD
         if(Difficulty.start){
         move(-2);
         
@@ -26,6 +27,16 @@ public class Footman extends Allies
         attack();
         die();
         ani();
+=======
+        
+        if(Difficulty.start){
+        move(-2);
+        }
+        ani();
+        attack();
+        die();
+        
+>>>>>>> refs/heads/Master
     }
     public void die(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){  
@@ -47,11 +58,18 @@ public class Footman extends Allies
     }
     }
     public void ani(){
+<<<<<<< HEAD
         setImage(i1);
         if(this.getImage().equals(i1)){
             setImage(i2);
         }
         if(this.getImage().equals(i2)){
+=======
+        if(PlayWorld.second%2==1){
+            setImage(i2);
+        }
+        if(PlayWorld.second%2==0){
+>>>>>>> refs/heads/Master
             setImage(i1);
         }
             
