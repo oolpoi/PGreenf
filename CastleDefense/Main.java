@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Main extends Button
 {
     GreenfootSound c = new GreenfootSound("click.wav");
+    static boolean click = false;
     /**
      * Act - do whatever the Main wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -20,7 +21,7 @@ public class Main extends Button
     }    
     public void start(){
         if(Greenfoot.mouseClicked(this)){
-            Greenfoot.setWorld(new Home());
+            Greenfoot.setWorld(new Home(false));
             c.setVolume(80);
             c.play();
             PlayWorld.time=0;

@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -17,12 +18,19 @@ public class Home extends World
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1200, 750, 1);
-        s.setVolume(8);
-        s.playLoop();
-        prepare();
+        playSound();
         
+        prepare();
     }
-    
+    public Home(boolean playSound)
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(1200, 750, 1);
+        
+        prepare();
+    }
+    
+
     public void prepare(){
 
         Archer archer = new Archer();
@@ -76,4 +84,18 @@ public class Home extends World
         htp.setLocation(591,624);
         cd2.setLocation(589,339);
     }
+    public void strted(){
+        s.playLoop();
+    }
+    public void stopped(){
+        s.stop();
+    }
+    public void playSound(){
+        s.setVolume(20);
+        s.playLoop();
+    }
+    public void stopSound(){
+        s.stop();
+    }
+    
 }
