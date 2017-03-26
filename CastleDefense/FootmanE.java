@@ -18,26 +18,17 @@ public class FootmanE extends Enemies
         if(Difficulty.start){
         move((1*Difficulty.diff));  
         }
-<<<<<<< HEAD
-=======
         ani();
->>>>>>> refs/heads/Master
         die();
         attack();
     }
    public void die(){
-<<<<<<< HEAD
-        if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){  
-             if(isTouching(Arrow.class)){
-            getWorld().removeObject(this);
-=======
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
             int count = 0;
              if(isTouching(Arrow.class)){
                  
             getWorld().removeObject(this);
 
->>>>>>> refs/heads/Master
             PlayWorld.score+=5;
             PlayWorld.money+=50;
         }
@@ -53,8 +44,6 @@ public class FootmanE extends Enemies
          
     }
    }
-<<<<<<< HEAD
-=======
    
        public void ani(){
         if(PlayWorld.second%2==1){
@@ -67,5 +56,4 @@ public class FootmanE extends Enemies
     }
        
     
->>>>>>> refs/heads/Master
 }

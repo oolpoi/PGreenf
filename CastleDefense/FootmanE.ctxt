@@ -8,10 +8,6 @@ comment2.params=
 comment2.target=void\ die()
 comment3.params=
 comment3.target=void\ attack()
-<<<<<<< HEAD
-numComments=4
-=======
 comment4.params=
 comment4.target=void\ ani()
 numComments=5
->>>>>>> refs/heads/Master
