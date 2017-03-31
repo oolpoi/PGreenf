@@ -33,7 +33,9 @@ public class EnemyCastle extends Enemies
     {
     timeStarted = currentTime;
      getWorld().addObject(new FootmanE(),0,565);
+     
    }
+   
    }
    else if(Difficulty.diff==2){
      if (elapsedTime / 230 > 10)
@@ -41,6 +43,7 @@ public class EnemyCastle extends Enemies
     timeStarted = currentTime;
      getWorld().addObject(new FootmanE(),0,565);
    }
+  
    }
    else if(Difficulty.diff==3){
      if (elapsedTime / 150 > 10)
@@ -48,6 +51,7 @@ public class EnemyCastle extends Enemies
     timeStarted = currentTime;
      getWorld().addObject(new FootmanE(),0,565);
    }
+   
    } 
    }
    public void endGame(){
@@ -56,6 +60,7 @@ public class EnemyCastle extends Enemies
            this.Hp=2000;
            this.win = 0;
            PlayWorld.money=0;
+           PlayWorld.time =0;
         }
     }
 }

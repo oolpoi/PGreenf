@@ -12,6 +12,7 @@ public class FootmanE extends Enemies
      * Act - do whatever the FootmanE wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+   
     public void act() 
     {
         // Add your action code here.
@@ -24,16 +25,20 @@ public class FootmanE extends Enemies
     }
    public void die(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
-            int count = 0;
-             if(isTouching(Arrow.class)){
+            int count =0;
+            
+             if(isTouching(Arrow.class)||isTouching(FireBall.class)){
+                 
                  
             getWorld().removeObject(this);
 
             PlayWorld.score+=5;
             PlayWorld.money+=50;
+        
         }
+            
     }
-    }
+}
     public void attack(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
          if(isTouching(AllyCastle.class)){

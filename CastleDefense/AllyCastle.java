@@ -26,6 +26,7 @@ public class AllyCastle extends Allies
            this.Hp=1500;
            EnemyCastle.win =1;
            PlayWorld.money=0;
+           PlayWorld.time =0;
         }
     }
 }

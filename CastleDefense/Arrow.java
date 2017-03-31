@@ -23,12 +23,13 @@ public class Arrow extends Actor
     public void remove(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){ 
             int count=0;
-            if(isTouching(FootmanE.class)){
+            if(isTouching(FootmanE.class)||isTouching(TankE.class)){
                 count++;
                 getWorld().removeObject(this);
                 hi.setVolume(80);
                 
             }
+            
             }
          
         
