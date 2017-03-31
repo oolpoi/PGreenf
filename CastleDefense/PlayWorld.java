@@ -21,8 +21,9 @@ public class PlayWorld extends World
     {  
         
         super(1200, 750, 1); 
-        addObject(new Ab(),699,654);
-        addObject(new Fb(),582,654);//
+        addObject(new Ab(),582,654);
+        addObject(new Fb(),465,654);
+        addObject(new Db(),699,654);
         prepare();
     }
     public void act(){
@@ -36,6 +37,7 @@ public class PlayWorld extends World
                 second/=60;
             }
         showText("Time : "+min+"."+second,600,120);
+        
     }
         showText("Health : "+AllyCastle.Hp,1100,140);
         showText("Health : "+EnemyCastle.Hp,100,140);
@@ -50,10 +52,11 @@ public class PlayWorld extends World
         allycastle.setLocation(1199,388);
         ememycastle.setLocation(1,363);
         
-        addObject(new Ab(),699,654);
-        addObject(new Fb(),582,654);
+        addObject(new Ab(),582,654);
+        addObject(new Fb(),465,654);
+        addObject(new Db(),699,654);
         
         addObject(new Restart(),1100,650);
-        
+    
     }
 }
