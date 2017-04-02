@@ -1,14 +1,14 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Dragon here.
+ * Write a description of class Archer here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Dragon extends Allies
+public class Archer extends Allies
 {
-    private long timeStarted = System.currentTimeMillis();
+     private long timeStarted = System.currentTimeMillis();
      GreenfootSound sho = new GreenfootSound ("shot.wav");  
     /**
      * Act - do whatever the Archer wants to do. This method is called whenever
@@ -21,6 +21,8 @@ public class Dragon extends Allies
         move(0);
     }*/
     shoot();
+    die();
+    
     }
     public void shoot(){
         if(Difficulty.start){
@@ -30,14 +32,20 @@ public class Dragon extends Allies
      if (elapsedTime / 400 > 10)
      {
     timeStarted = currentTime;
-     getWorld().addObject(new FireBall(),getX(),getY());
+     getWorld().addObject(new Arrow(),getX(),getY());
      sho.setVolume(80);
      sho.play();
-     getWorld().removeObject(this);
     }
     
     }
     
     }
-   
+    public void die(){
+        if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){  
+            if(isTouching(FootmanE.class)){
+            getWorld().removeObject(this);
+        }
+    }
+    }
+     
 }

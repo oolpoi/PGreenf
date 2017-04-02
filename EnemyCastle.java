@@ -10,6 +10,7 @@ public class EnemyCastle extends Enemies
 {
     public static int Hp = 2000;
     private long timeStarted = System.currentTimeMillis();
+    private long timeStarted2 = System.currentTimeMillis();
     public static int win = -1;
     /**
      * Act - do whatever the EmemyCastle wants to do. This method is called whenever
@@ -18,7 +19,7 @@ public class EnemyCastle extends Enemies
     public void act() 
     {
         // Add your action code here.
-        
+        t();
         spawnUnit();
         endGame();
     }
@@ -28,39 +29,45 @@ public class EnemyCastle extends Enemies
     public void spawnUnit(){
     long currentTime = System.currentTimeMillis();
     long elapsedTime = currentTime - timeStarted;
+    int count =0;
     if(Difficulty.diff==1){
      if (elapsedTime / 300 > 10)
     {
     timeStarted = currentTime;
-     getWorld().addObject(new FootmanE(),0,565);
-     
-   }
-   
-   }
-   else if(Difficulty.diff==2){
-     if (elapsedTime / 230 > 10)
-    {
-    timeStarted = currentTime;
-     getWorld().addObject(new FootmanE(),0,565);
-   }
-  
-   }
-   else if(Difficulty.diff==3){
-     if (elapsedTime / 150 > 10)
-    {
-    timeStarted = currentTime;
-     getWorld().addObject(new FootmanE(),0,565);
-   }
-   
+    getWorld().addObject(new FootmanE(),0,565);
    } 
    }
+   else if(Difficulty.diff==2){
+     if (elapsedTime / 300 > 7)
+    {
+    timeStarted = currentTime;
+     getWorld().addObject(new FootmanE(),0,565);
+   }
+   }
+   else if(Difficulty.diff==3){
+     if (elapsedTime / 300 > 4)
+    {
+    timeStarted = currentTime;
+     getWorld().addObject(new FootmanE(),0,565);
+   }
+   } 
+   }
+   public void t(){
+        long currentTime = System.currentTimeMillis();
+    long elapsedTime = currentTime - timeStarted2;
+       if (elapsedTime / 300 > 40)
+    {
+    timeStarted2 = currentTime;
+     getWorld().addObject(new TankE(),0,560);
+   }
+    }
    public void endGame(){
        if(this.Hp<0){
            Greenfoot.setWorld(new ScoreBoard());
            this.Hp=2000;
            this.win = 0;
            PlayWorld.money=0;
-           PlayWorld.time =0;
         }
     }
+    
 }

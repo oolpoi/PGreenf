@@ -22,17 +22,22 @@ public class Arrow extends Actor
     }
     public void remove(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){ 
-            int count=0;
-            if(isTouching(FootmanE.class)||isTouching(TankE.class)){
-                count++;
+            TankE t = (TankE) getOneIntersectingObject(TankE.class);
+            FootmanE f= (FootmanE) getOneIntersectingObject(FootmanE.class);
+            if(t!=null){
+                t.tHP-=50;
+                hi.setVolume(20);
+                hi.play();
                 getWorld().removeObject(this);
-                hi.setVolume(80);
-                
-            }
+                } 
             
+            else if(f!=null){
+                f.HP-=40;
+                hi.setVolume(20);
+                hi.play();
+                getWorld().removeObject(this);
+                } 
             }
-         
-        
         else if(isAtEdge()){
             getWorld().removeObject(this);
         }

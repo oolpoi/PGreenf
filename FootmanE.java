@@ -8,11 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class FootmanE extends Enemies
 {
+    int HP=40;
+    GreenfootImage im = new GreenfootImage("eF.png");
     /**
      * Act - do whatever the FootmanE wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-   
     public void act() 
     {
         // Add your action code here.
@@ -20,25 +21,20 @@ public class FootmanE extends Enemies
         move((1*Difficulty.diff));  
         }
         ani();
-        die();
+        damage();
         attack();
-    }
-   public void die(){
-        if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
-            int count =0;
-            
-             if(isTouching(Arrow.class)||isTouching(FireBall.class)){
-                 
-                 
-            getWorld().removeObject(this);
 
-            PlayWorld.score+=5;
-            PlayWorld.money+=50;
-        
-        }
-            
     }
-}
+   public void damage(){
+        if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
+             if(HP<=0){
+             
+             PlayWorld.score+=5;
+             PlayWorld.money+=50;
+             getWorld().removeObject(this);
+            }
+    }
+    }
     public void attack(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
          if(isTouching(AllyCastle.class)){
@@ -49,7 +45,17 @@ public class FootmanE extends Enemies
          
     }
    }
-   
+   public void changePic(){
+        if(Difficulty.diff==1){
+
+        }
+        if(Difficulty.diff==2){
+            
+        }
+        if(Difficulty.diff==3){
+            
+        }
+    }
        public void ani(){
         if(PlayWorld.second%2==1){
             setImage("eF.png");
@@ -59,6 +65,5 @@ public class FootmanE extends Enemies
         }
             
     }
-       
     
 }

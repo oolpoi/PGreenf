@@ -1,15 +1,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CD here.
+ * Write a description of class Allies here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CD extends Button
+public class Allies extends Actor
 {
     /**
-     * Act - do whatever the CD wants to do. This method is called whenever
+     * Act - do whatever the Allies wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
