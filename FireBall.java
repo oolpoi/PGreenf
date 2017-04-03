@@ -20,10 +20,27 @@ public class FireBall extends Actor
         move(-3);
         remove();
     }
+    //Deleting all of units that touching this
     public void remove(){
-       
-         
-        
+        if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){ 
+            TankE t = (TankE) getOneIntersectingObject(TankE.class);
+            FootmanE f= (FootmanE) getOneIntersectingObject(FootmanE.class);
+            if(t!=null){
+                t.tHP-=1000;
+                hi.setVolume(20);
+                hi.play();
+
+                } 
+            
+            else if(f!=null){
+                f.HP-=1000;
+                hi.setVolume(20);
+                hi.play();
+
+                } 
+            }
+            //Remove when is at edge
+            
         if(isAtEdge()){
             getWorld().removeObject(this);
         }

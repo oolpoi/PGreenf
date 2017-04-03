@@ -19,7 +19,7 @@ public class Footman extends Allies
     public void act() 
     {
         // Add your action code here.
-        
+        //Set the base movement of Footman
         if(Difficulty.start){
         move(-2);
         }
@@ -28,6 +28,7 @@ public class Footman extends Allies
         die();
         
     }
+    //Remove the footman when die
     public void die(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){  
             if(isTouching(FootmanE.class)){
@@ -35,7 +36,7 @@ public class Footman extends Allies
         }
     }
     }
-
+    //When touching damage the castle
     public void attack(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){
          if(isTouching(EnemyCastle.class)){
@@ -44,9 +45,9 @@ public class Footman extends Allies
              PlayWorld.money+=100;
              return;
             }
-         return;
     }
     }
+    //animation
     public void ani(){
         if(PlayWorld.second%2==1){
             setImage(i2);

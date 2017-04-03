@@ -18,6 +18,7 @@ public class Db extends Button
         // Add your action code here.
         spawnUlti();
     }    
+    //Adding a Drago to scene
     public void spawnUlti(){ 
     if(Greenfoot.mouseClicked(this)){
             if(PlayWorld.money>=500){

@@ -20,22 +20,30 @@ public class Arrow extends Actor
         move(-3);
         remove();
     }
+    //Remove and decrease Hp of hitting enemy
     public void remove(){
         if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){ 
-            int count=0;
-            if(isTouching(FootmanE.class)||isTouching(TankE.class)){
-                count++;
+            TankE t = (TankE) getOneIntersectingObject(TankE.class);
+            FootmanE f= (FootmanE) getOneIntersectingObject(FootmanE.class);
+            if(t!=null){
+                t.tHP-=50;
+                hi.setVolume(20);
+                hi.play();
                 getWorld().removeObject(this);
-                hi.setVolume(80);
-                
-            }
+                } 
             
-            }
-         
-        
-        else if(isAtEdge()){
+            else if(f!=null){
+                f.HP-=40;
+                hi.setVolume(20);
+                hi.play();
+                getWorld().removeObject(this);
+                } 
+                //remove when arrow is at the end of map
+                else if(isAtEdge()){
             getWorld().removeObject(this);
         }
+            }
+
     }
 }
 

@@ -18,6 +18,7 @@ public class Easy extends Difficulty
         // Add your action code here.
         start();
     }
+    //Set play world to Easy
     public void start(){
         if(Greenfoot.mouseClicked(this)){
             Greenfoot.setWorld(new PlayWorld());

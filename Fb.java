@@ -18,6 +18,7 @@ public class Fb extends Button
         // Add your action code here.
         spawn();
     }    
+    //Spawn ally footman
     public void spawn(){ 
     if(Greenfoot.mouseClicked(this)){
             if(PlayWorld.money>=100){

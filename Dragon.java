@@ -21,14 +21,13 @@ public class Dragon extends Allies
         move(0);
     }*/
     shoot();
-    die();
-    
     }
+    //Shoot a fireball to destroy enemy
     public void shoot(){
         if(Difficulty.start){
     long currentTime = System.currentTimeMillis();
     long elapsedTime = currentTime - timeStarted;
-    
+    //delay of shooting
      if (elapsedTime / 400 > 10)
      {
     timeStarted = currentTime;
@@ -41,11 +40,5 @@ public class Dragon extends Allies
     }
     
     }
-    public void die(){
-        if(getWorld()!=null&&getWorld().getObjects(Footman.class)!=null){  
-            if(isTouching(FootmanE.class)){
-            getWorld().removeObject(this);
-        }
-    }
-}
+   
 }
